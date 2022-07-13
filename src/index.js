@@ -1,10 +1,9 @@
 module.exports = function reverse(n) {
-  if (n > 0) {
+  if (n >= 0) {
     let str = n + "";
     return Number(str.split("").reverse().join(""));
   } else {
-    let str = n + "";
-    let numb = Number(str.split("").shift().reverse().join(""));
-    return "-" + numb;
+    let numb = n * -1;
+    return "-" + Number(str.split("").shift().reverse().join(""));
   }
 };
